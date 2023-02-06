@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mvn deploy:deploy-file \
+      -Dfile=bind.jar \
+      -DrepositoryId=clojars \
+      -Durl=https://clojars.org/repo \
+      -DpomFile=pom.xml

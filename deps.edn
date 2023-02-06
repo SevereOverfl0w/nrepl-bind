@@ -1,0 +1,7 @@
+{:paths ["src"]
+ :aliases {:pack {:deps {io.github.juxt/pack.alpha {:git/sha "b75f4a229138edf4fabe2f8dae48745e66dc9a1a"}}
+                  :ns-default juxt.pack.cli.api
+                  :exec-fn library
+                  :exec-args {:path "bind.jar"
+                              :pom "pom.xml"
+                              :lib io.dominic/nrepl-bind}}}}

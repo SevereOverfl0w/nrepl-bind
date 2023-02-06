@@ -1,0 +1,10 @@
+= nrepl-bind
+
+It's really handy to be able to use `set!` on dynamic vars from nrepl clients.
+They will persist across evaluations, test calls, etc. without the editor providing a specific lever.
+Unfortunately, you can only `set!` vars in a [short list](https://github.com/nrepl/nrepl/blob/8082e9f9d6d4fc64f0ff1b31913a9f7b99359718/src/clojure/nrepl/middleware/interruptible_eval.clj#L89-L101).
+
+This middleware allows you to add vars to that list from a running REPL by calling `io.dominic.nrepl-bind/try-bind-vars` or `io.dominic.nrepl-bind/add-bound-var`.
+Following that, you can call `set!` to your heart's content.
+
+== Installation
