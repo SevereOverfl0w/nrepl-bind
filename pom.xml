@@ -4,11 +4,11 @@
   <packaging>jar</packaging>
   <groupId>io.dominic</groupId>
   <artifactId>nrepl-bind</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <scm>
     <connection>scm:git:https://github.com/SevereOverfl0w/nrepl-bind</connection>
     <developerConnection>scm:git:ssh://git@github.com:SevereOverfl0w/nrepl-bind.git</developerConnection>
-    <tag>v0.1.0</tag>
+    <tag>v0.1.1</tag>
     <url>https://github.com/SevereOverfl0w/nrepl-bind</url>
   </scm>
   <name>nrepl-bind</name>
