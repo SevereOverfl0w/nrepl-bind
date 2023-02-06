@@ -28,4 +28,5 @@
           @bind-vars)))
     (h msg)))
 
-(set-descriptor! #'wrap-bind {:requires #{"clone"}})
+(set-descriptor! #'wrap-bind {:requires #{"clone"}
+                              :expects #{"eval" "load-file"}})
