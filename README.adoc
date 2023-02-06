@@ -1,10 +1,15 @@
 = nrepl-bind
 
+image:https://img.shields.io/clojars/v/io.dominic/nrepl-bind.svg[Clojars Project, link=https://clojars.org/io.dominic/nrepl-bind]
+
 It's really handy to be able to use `set!` on dynamic vars from nrepl clients.
 They will persist across evaluations, test calls, etc. without the editor providing a specific lever.
-Unfortunately, you can only `set!` vars in a [short list](https://github.com/nrepl/nrepl/blob/8082e9f9d6d4fc64f0ff1b31913a9f7b99359718/src/clojure/nrepl/middleware/interruptible_eval.clj#L89-L101).
+Unfortunately, you can only `set!` vars in a https://github.com/nrepl/nrepl/blob/8082e9f9d6d4fc64f0ff1b31913a9f7b99359718/src/clojure/nrepl/middleware/interruptible_eval.clj#L89-L101[short list].
 
 This middleware allows you to add vars to that list from a running REPL by calling `io.dominic.nrepl-bind/try-bind-vars` or `io.dominic.nrepl-bind/add-bound-var`.
 Following that, you can call `set!` to your heart's content.
 
 == Installation
+
+The middleware var is `io.dominic.nrepl-bind/wrap-bind`.
+Add this to https://nrepl.org/nrepl/1.0/usage/server.html#server-options[`:middleware`], pass it with https://nrepl.org/nrepl/usage/server.html#using-clojure-cli-tools[`--middleware`] or use your https://docs.cider.mx/cider/basics/up_and_running.html#auto-injecting-dependencies[editor-specific] https://github.com/clojure-vim/vim-jack-in/blob/c7f73e6788b5a97ac700f6c1fe09c26ebfa324d0/plugin/jack_in.vim#L9-L16[configuration].
